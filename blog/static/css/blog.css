@@ -16,7 +16,8 @@
 }
 
 h1, h2, h3 {
-    font-family: "Lato"
+    font-family: "Lato";
+    color: olivedrab;
 }
 
 .date {
@@ -25,7 +26,7 @@ h1, h2, h3 {
 }
 
 .save {
-    float: right;
+    float: left;
 }
 
 .post-form textarea,
@@ -36,8 +37,8 @@ h1, h2, h3 {
 .top-menu,
 .top-menu:hover,
 .top-menu:visited {
-    color: white;
-    float: right;
+    color: olivedrab;
+    float: left;
     font-size: 26pt;
     margin-right: 20px;
 }
@@ -63,14 +64,14 @@ h1, h2, h3 {
 
 .btn-secondary,
 .btn-secondary:visited {
-    color: darkred;
+    color: midnightblue;
     background: none;
-    border-color: darkred;
+    border-color: midnightblue;
 }
 
 .btn-secondary:hover {
     color: white;
-    background-color: darkred;
+    background-color: midnightblue;
 }
 
 body {
