@@ -17,6 +17,7 @@
 
 h1, h2, h3 {
     font-family: "Lato";
+    font-size: 26pt;
     color: olivedrab;
 }
 
@@ -34,12 +35,15 @@ h1, h2, h3 {
     width: 100%;
 }
 
+.right {
+    float: right;
+}
+
 .top-menu,
 .top-menu:hover,
 .top-menu:visited {
     color: olivedrab;
     float: left;
-    font-size: 26pt;
     margin-right: 20px;
 }
 
