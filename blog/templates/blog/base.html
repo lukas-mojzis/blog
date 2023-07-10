@@ -19,6 +19,13 @@
                     <a href="{% url 'post_draft_list' %}" class="btn btn-secondary">
                         {% include './icons/pencil-square.svg' %}
                     </a>
+                    <a href="{% url 'logout' %}" class="btn btn-secondary right">
+                        {{ user.username }} {% include './icons/box-arrow-right.svg' %}
+                    </a>
+                {% else %}
+                    <a href="{% url 'login' %}" class="btn btn-secondary right">
+                        {% include './icons/lock.svg' %}
+                    </a>
                 {% endif %}
                 <h1><a href="/">Blog</a></h1>
             </div>
