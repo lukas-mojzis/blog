@@ -25,7 +25,8 @@
     </article>
 
     <hr>
-    
+
+    <h3>Comments</h3>
     {% for comment in post.comments.all %}
         <div class="comment">
             <div class="date">{{ comment.created_date }}</div>
@@ -35,4 +36,13 @@
     {% empty %}
         <p>No comments yet.</p>
     {% endfor %}
+
+    <hr>
+
+    <h3>Add new comment</h3>
+    <form method="POST" class="post-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-secondary">Submit</button>
+    </form>
 {% endblock %}
