@@ -82,6 +82,10 @@ h1, h2, h3 {
     margin: 20px 0px 20px 20px;
 }
 
+.comment > .actions {
+    float: right;
+}
+
 body {
     padding: 15px 300px 15px 300px;
 }
