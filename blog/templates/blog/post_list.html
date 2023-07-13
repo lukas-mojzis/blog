@@ -6,6 +6,7 @@
             <h3><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
             <time class="date">Published on {{ post.published_date }}</time>
             <p>{{ post.text|truncatechars:500 }}</p>
+            <a href="{% url 'post_detail' pk=post.pk %}">{{ post.comments.count }} comment(s)</a>
         </article>
     {% endfor %}
 {% endblock %}
