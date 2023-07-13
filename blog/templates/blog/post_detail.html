@@ -27,12 +27,26 @@
     <hr>
 
     <h3>Comments</h3>
-    {% for comment in post.comments.all %}
-        <div class="comment">
-            <div class="date">{{ comment.created_date }}</div>
-            <strong>{{ comment.author }}</strong>
-            <p>{{ comment.text|linebreaks }}</p>
-        </div>
+    {% for comment in post.ordered_comments.all %}
+            <div class="comment">
+                <aside class="actions">
+                    {% if user.is_authenticated %}
+                        {% if not comment.approved_comment %}
+                            <a href="{% url 'comment_approve' pk=comment.pk %}" class="btn btn-secondary">
+                                {% include './icons/check-square.svg' %}
+                            </a>
+                        {% endif %}
+                        <a href="{% url 'comment_remove' pk=comment.pk %}" class="btn btn-secondary">
+                            {% include './icons/trash.svg' %}
+                        </a>
+                    {% endif %}
+                </aside>
+                {% if comment.approved_comment or user.is_authenticated %}
+                    <div class="date">{{ comment.created_date }}</div>
+                    <strong>{{ comment.author }}</strong>
+                    <p>{{ comment.text|linebreaks }}</p>
+                {% endif %}
+            </div>
     {% empty %}
         <p>No comments yet.</p>
     {% endfor %}
