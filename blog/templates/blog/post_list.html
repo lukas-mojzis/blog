@@ -9,6 +9,9 @@ Home – Blog
         <article class="post">
             <h3><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
             <time class="date">Published on {{ post.published_date }}</time>
+            {% if post.edited_date > post.published_date %}
+                <time class="date"> / Last edited on {{ post.edited_date }}</time>
+            {% endif %}
             <p>{{ post.text|truncatechars:500 }}</p>
             <a href="{% url 'post_detail' pk=post.pk %}">{{ post.approved_comments.count }} comment(s)</a>
         </article>

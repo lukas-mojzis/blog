@@ -9,6 +9,9 @@ Drafts – Blog
         <article class="post">
             <h3><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
             <time class="date">Created on {{ post.created_date }}</time>
+            {% if post.edited_date %}
+                <time class="date"> / Last edited on {{ post.edited_date }}</time>
+            {% endif %}
             <p>{{ post.text|truncatechars:500 }}</p>
         </article>
     {% empty %}

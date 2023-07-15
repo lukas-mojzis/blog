@@ -24,6 +24,11 @@
         <h3>{{ post.title }}</h3>
         {% if post.published_date %}
             <time class="date">Published on {{ post.published_date }}</time>
+        {% else %}
+            <time class="date">Created on {{ post.created_date }}</time>
+        {% endif %}
+        {% if post.edited_date > post.published_date %}
+            <time class="date"> / Last edited on {{ post.edited_date }}</time>
         {% endif %}
         <p>{{ post.text|linebreaks }}</p>
     </article>
