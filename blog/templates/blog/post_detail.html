@@ -1,5 +1,9 @@
 {% extends 'blog/base.html' %}
 
+{% block title %}
+{{ post.title }} – Blog
+{% endblock %}
+
 {% block content %}
     <article class="post">
         <aside class="actions">

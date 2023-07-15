@@ -1,5 +1,9 @@
 {% extends 'blog/base.html' %}
 
+{% block title %}
+Drafts – Blog
+{% endblock %}
+
 {% block content %}
     {% for post in posts %}
         <article class="post">
