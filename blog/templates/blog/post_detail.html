@@ -11,11 +11,11 @@
                 <a href="{% url 'post_edit' pk=post.pk %}" class="btn btn-secondary">
                     {% include './icons/pencil-fill.svg' %}
                 </a>
-                <a href="{% url 'post_remove' pk=post.pk %}" class="btn btn-secondary">
+                <a href="{% url 'post_remove' pk=post.pk %}" class="btn btn-secondary" onclick="return confirm('Are you sure you want to remove the post?')">
                     {% include './icons/trash.svg' %}
                 </a>
                 {% if not post.published_date %}
-                    <a href="{% url 'post_publish' pk=post.pk %}" class="btn btn-secondary">
+                    <a href="{% url 'post_publish' pk=post.pk %}" class="btn btn-secondary" onclick="return confirm('Are you sure you want to publish the post?')">
                         Publish
                     </a>
                 {% endif %}
@@ -36,11 +36,11 @@
                 <aside class="actions">
                     {% if user.is_authenticated %}
                         {% if not comment.approved_comment %}
-                            <a href="{% url 'comment_approve' pk=comment.pk %}" class="btn btn-secondary">
+                            <a href="{% url 'comment_approve' pk=comment.pk %}" class="btn btn-secondary" onclick="return confirm('Are you sure you want to approve the comment?')">
                                 {% include './icons/check-square.svg' %}
                             </a>
                         {% endif %}
-                        <a href="{% url 'comment_remove' pk=comment.pk %}" class="btn btn-secondary">
+                        <a href="{% url 'comment_remove' pk=comment.pk %}" class="btn btn-secondary" onclick="return confirm('Are you sure you want to remove the comment?')">
                             {% include './icons/trash.svg' %}
                         </a>
                     {% endif %}
