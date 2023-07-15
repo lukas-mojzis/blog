@@ -7,5 +7,7 @@
             <time class="date">Created on {{ post.created_date }}</time>
             <p>{{ post.text|truncatechars:500 }}</p>
         </article>
+    {% empty %}
+        <p>There are currently no unpublished drafts.</p>
     {% endfor %}
 {% endblock %}
