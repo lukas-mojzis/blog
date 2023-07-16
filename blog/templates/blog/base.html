@@ -23,7 +23,7 @@
                     <a href="{% url 'post_draft_list' %}" class="btn btn-secondary">
                         {% include './icons/pencil-square.svg' %}
                     </a>
-                    <a href="{% url 'logout' %}" class="btn btn-secondary right">
+                    <a href="{% url 'logout' %}?next={{ request.path|urlencode }}" class="btn btn-secondary right">
                         {{ user.username }} {% include './icons/box-arrow-right.svg' %}
                     </a>
                 {% else %}
