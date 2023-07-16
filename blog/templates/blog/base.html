@@ -27,7 +27,7 @@
                         {{ user.username }} {% include './icons/box-arrow-right.svg' %}
                     </a>
                 {% else %}
-                    <a href="{% url 'login' %}" class="btn btn-secondary right">
+                    <a href="{% url 'login' %}?next={{ request.path|urlencode }}" class="btn btn-secondary right">
                         {% include './icons/lock.svg' %}
                     </a>
                 {% endif %}
