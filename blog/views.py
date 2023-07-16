@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
+from django.http import Http404
 from .models import Post, Comment
 from .forms import PostForm, CommentForm
 
@@ -10,6 +11,8 @@ def post_list(request):
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
+    if not request.user.is_authenticated and not post.published_date:
+        raise Http404
     if request.method == "POST":
         form = CommentForm(request.POST)
         if form.is_valid():
