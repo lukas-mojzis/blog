@@ -9,7 +9,7 @@ Home – Blog
         <article class="post">
             <h3><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
             <time class="date">Published on {{ post.published_date }}</time>
-            {% if post.edited_date > post.published_date %}
+            {% if post.edited_date and not post.published_date or post.published_date < post.edited_date %}
                 <time class="date"> / Last edited on {{ post.edited_date }}</time>
             {% endif %}
             <p>{{ post.text|truncatechars:500 }}</p>

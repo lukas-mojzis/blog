@@ -27,7 +27,7 @@
         {% else %}
             <time class="date">Created on {{ post.created_date }}</time>
         {% endif %}
-        {% if post.edited_date > post.published_date %}
+        {% if post.edited_date and not post.published_date or post.published_date < post.edited_date %}
             <time class="date"> / Last edited on {{ post.edited_date }}</time>
         {% endif %}
         <p>{{ post.text|linebreaks }}</p>
