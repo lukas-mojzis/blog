@@ -58,7 +58,9 @@
                 {% endif %}
             </div>
     {% empty %}
-        <p>No comments yet.</p>
+        <div class="post">
+            <p>No comments yet.</p>
+        </div>
     {% endfor %}
 
     <hr>
@@ -67,6 +69,6 @@
     <form method="POST" class="post-form">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="save btn btn-secondary" title="Submit comment for approval">Submit</button>
+        <button type="submit" class="btn btn-secondary left" title="Submit comment for approval">Submit</button>
     </form>
 {% endblock %}

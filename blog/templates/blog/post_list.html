@@ -13,7 +13,8 @@ Home – Blog
                 <time class="date"> / Last edited on {{ post.edited_date }}</time>
             {% endif %}
             <p>{{ post.text|truncatechars:500 }}</p>
-            <a href="{% url 'post_detail' pk=post.pk %}#comments">{{ post.approved_comments.count }} comment(s)</a>
+            <a href="{% url 'post_detail' pk=post.pk %}#comments" class="comment-link">{{ post.approved_comments.count }} comment(s)</a>
+        <hr>
         </article>
     {% endfor %}
 {% endblock %}

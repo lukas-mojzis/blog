@@ -1,3 +1,24 @@
+body {
+    padding: 15px 300px 15px 300px;
+    font-family: "Lato";
+}
+
+h3,
+h3 a,
+h3 a:visited,
+h3 a:active {
+    color: olivedrab;
+    font-size: 22pt;
+}
+
+h3 a:hover {
+    text-decoration: none;
+}
+
+hr {
+    margin: 30px 0px 30px 0px;
+}
+
 .page-header {
     background-color: aliceblue;
     margin-top: 0px;
@@ -15,55 +36,30 @@
     text-decoration: none;
 }
 
-h1, h2, h3 {
-    font-family: "Lato";
-    font-size: 26pt;
-    color: olivedrab;
-}
-
-.date {
-    font-size: 13pt;
-    font-style: italic;
-}
-
-.save {
-    float: left;
-}
-
-.post-form textarea,
-.post-form input {
-    width: 100%;
-}
-
-.right {
-    float: right;
-}
-
-.top-menu,
-.top-menu:hover,
-.top-menu:visited {
-    color: olivedrab;
-    float: left;
-    margin-right: 20px;
-}
-
 .post {
-    margin-bottom: 40px;
-}
-
-.post h3,
-.post h3 a,
-.post h3 a:visited {
-    font-size: 22pt;
-    color: olivedrab;
+    margin-bottom: 30px;
 }
 
 .post p {
+    margin: 20px 0px 20px 0px;
     font-size: 13pt;
 }
 
 .post > .actions {
     float: right;
+}
+
+.comment {
+    margin: 20px 0px 20px 20px;
+}
+
+.comment > .actions {
+    float: right;
+}
+
+.post-form textarea,
+.post-form input {
+    width: 100%;
 }
 
 .btn-secondary,
@@ -78,14 +74,27 @@ h1, h2, h3 {
     background-color: midnightblue;
 }
 
-.comment {
-    margin: 20px 0px 20px 20px;
+.date {
+    font-size: 13pt;
+    font-style: italic;
 }
 
-.comment > .actions {
+.comment-link,
+.comment-link:visited,
+.comment-link:active {
+    color: midnightblue;
+    font-size: 13pt;
+    font-style: italic;
+}
+
+.comment-link:hover {
+    text-decoration: none;
+}
+
+.left {
+    float: left;
+}
+
+.right {
     float: right;
-}
-
-body {
-    padding: 15px 300px 15px 300px;
 }
