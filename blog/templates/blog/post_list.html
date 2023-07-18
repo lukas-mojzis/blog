@@ -14,7 +14,9 @@ Home – Blog
             {% endif %}
             <p>{{ post.text|truncatechars:500 }}</p>
             <a href="{% url 'post_detail' pk=post.pk %}#comments" class="comment-link">{{ post.approved_comments.count }} comment(s)</a>
-        <hr>
+            {% if not forloop.last %}
+                <hr>
+            {% endif %}
         </article>
     {% endfor %}
 {% endblock %}
