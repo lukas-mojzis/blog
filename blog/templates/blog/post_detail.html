@@ -8,17 +8,17 @@
     <article class="post">
         <aside class="actions">
             {% if user.is_authenticated %}
+                {% if not post.published_date %}
+                    <a href="{% url 'post_publish' pk=post.pk %}" class="btn btn-secondary" title="Publish post" onclick="return confirm('Are you sure you want to publish the post?')">
+                        {% include './icons/check-square.svg' %}
+                    </a>
+                {% endif %}
                 <a href="{% url 'post_edit' pk=post.pk %}" class="btn btn-secondary" title="Edit post">
                     {% include './icons/pencil-fill.svg' %}
                 </a>
                 <a href="{% url 'post_remove' pk=post.pk %}" class="btn btn-secondary" title="Remove post" onclick="return confirm('Are you sure you want to remove the post?')">
                     {% include './icons/trash.svg' %}
                 </a>
-                {% if not post.published_date %}
-                    <a href="{% url 'post_publish' pk=post.pk %}" class="btn btn-secondary" title="Publish post" onclick="return confirm('Are you sure you want to publish the post?')">
-                        Publish
-                    </a>
-                {% endif %}
             {% endif %}
         </aside>
         <h3>{{ post.title }}</h3>
@@ -67,6 +67,6 @@
     <form method="POST" class="post-form">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="btn btn-secondary left" title="Submit comment for approval">Submit</button>
+        <button type="submit" class="btn btn-secondary text-button left" title="Submit comment for approval">Submit</button>
     </form>
 {% endblock %}

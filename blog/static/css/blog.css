@@ -87,6 +87,10 @@ hr {
     background-color: midnightblue;
 }
 
+.text-button {
+    margin: 0px 2px 0px 2px;
+}
+
 .date {
     font-size: 13pt;
     font-style: italic;
