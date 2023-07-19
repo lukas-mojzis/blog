@@ -9,7 +9,7 @@
     <form method="POST" class="post-form">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="btn btn-secondary text-button left" title="Save post" onclick="return confirm('Are you sure you want to save the post?')">Save</button>
+        <button type="submit" class="btn btn-secondary text-button" title="Save post" onclick="return confirm('Are you sure you want to save the post?')">Save</button>
     </form>
-    <button class="btn btn-secondary text-button left" title="Return to previous page" onclick="return history.back()">Cancel</button>
+    <button class="btn btn-secondary text-button" title="Return to previous page" onclick="return history.back()">Cancel</button>
 {% endblock %}

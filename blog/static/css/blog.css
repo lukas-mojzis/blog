@@ -70,9 +70,26 @@ hr {
     float: right;
 }
 
+.post-form {
+    margin-top: 20px;
+}
+
 .post-form textarea,
 .post-form input {
     width: 100%;
+}
+
+.comment-form {
+    margin-top: 20px;
+}
+
+.comment-form input {
+    width: 100%;
+}
+
+.comment-form textarea {
+    width: 100%;
+    height: 140px;
 }
 
 .btn-secondary,
@@ -88,7 +105,8 @@ hr {
 }
 
 .text-button {
-    margin: 0px 2px 0px 2px;
+    margin: 0px 2px 30px 2px;
+    float: left;
 }
 
 .date {
