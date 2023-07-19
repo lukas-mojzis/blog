@@ -28,7 +28,7 @@
                     </a>
                 {% else %}
                     <a href="{% url 'login' %}?next={{ request.path|urlencode }}" class="btn btn-secondary right" title="Log in">
-                        {% include './icons/lock.svg' %}
+                        {% include './icons/lock-fill.svg' %}
                     </a>
                 {% endif %}
                 <h1><a href="/">Blog</a></h1>
