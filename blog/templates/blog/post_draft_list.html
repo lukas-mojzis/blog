@@ -13,7 +13,9 @@ Drafts – Blog
                 <time class="date"> / Last edited on {{ post.edited_date }}</time>
             {% endif %}
             <p>{{ post.text|truncatechars:500 }}</p>
-            <hr>
+            {% if not forloop.last %}
+                <hr>
+            {% endif %}
         </article>
     {% empty %}
         <p id="empty-drafts">There are currently no unpublished drafts.</p>
