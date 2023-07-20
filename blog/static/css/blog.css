@@ -63,7 +63,8 @@ hr {
 }
 
 .comment {
-    margin: 20px 0px 20px 20px;
+    margin: 20px 0px 20px 0px;
+    font-size: 11pt;
 }
 
 .comment > .actions {
@@ -114,6 +115,10 @@ hr {
     font-style: italic;
 }
 
+.comment-date {
+    font-style: italic;
+}
+
 .comment-link,
 .comment-link:visited,
 .comment-link:active {
@@ -132,6 +137,10 @@ hr {
 
 .right {
     float: right;
+}
+
+#comment-text {
+    margin: 0px 0px 10px 0px;
 }
 
 #empty-comments {

@@ -52,9 +52,9 @@
                     {% endif %}
                 </aside>
                 {% if comment.approved_comment or user.is_authenticated %}
-                    <div class="date">{{ comment.created_date }}</div>
+                    <div class="comment-date">{{ comment.created_date }}</div>
                     <strong>{{ comment.author }}</strong>
-                    <p>{{ comment.text|linebreaks }}</p>
+                    <p id="comment-text">{{ comment.text|linebreaks }}</p>
                 {% endif %}
             </div>
     {% empty %}
