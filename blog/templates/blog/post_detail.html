@@ -64,7 +64,7 @@
     <hr>
 
     <h3>Add new comment</h3>
-    <form method="POST" class="comment-form">
+    <form method="POST" class="comment-form" title="">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="btn btn-secondary text-button" title="Submit comment for approval">Submit</button>

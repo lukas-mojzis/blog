@@ -6,7 +6,7 @@
 
 {% block content %}
     <h3>{{ title }}</h3>
-    <form method="POST" class="post-form">
+    <form method="POST" class="post-form" title="">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="btn btn-secondary text-button" title="Save post" onclick="return confirm('Are you sure you want to save the post?')">Save</button>
