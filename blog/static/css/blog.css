@@ -45,6 +45,10 @@ hr {
     clear: both;
 }
 
+.page-header h1 a:hover {
+    text-decoration: underline;
+}
+
 .page-footer {
     text-align: center;
     margin-top: 20px;
