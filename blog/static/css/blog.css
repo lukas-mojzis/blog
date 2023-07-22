@@ -177,7 +177,8 @@ hr {
     margin: -15px 0px 15px 0px;
 }
 
-#empty-comments {
+#empty-comments,
+#login-invalid {
     font-size: 13pt;
     margin: 20px 0px 20px 0px;
 }
