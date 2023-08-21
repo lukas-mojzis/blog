@@ -115,12 +115,13 @@ hr {
     margin: 0px 0px 20px 0px;
 }
 
-.login-firstrow {
-    padding-bottom: 3px;
+.login-form table tr th {
+    padding-right: 20px;
+    font-weight: normal;
 }
 
-.login-rightcolumn {
-    padding-left: 20px;
+.login-firstrow {
+    padding-bottom: 3px;
 }
 
 .btn-secondary,

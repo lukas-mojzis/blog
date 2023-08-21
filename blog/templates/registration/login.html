@@ -15,12 +15,12 @@ Log in – Blog
         {% csrf_token %}
         <table>
             <tr>
-                <td class="login-firstrow">{{ form.username.label_tag }}</td>
-                <td class="login-firstrow login-rightcolumn">{{ form.username }}</td>
+                <th class="login-firstrow" scope="row">{{ form.username.label_tag }}</td>
+                <td class="login-firstrow">{{ form.username }}</td>
             </tr>
             <tr>
-                <td>{{ form.password.label_tag }}</td>
-                <td class="login-rightcolumn">{{ form.password }}</td>
+                <th scope="row">{{ form.password.label_tag }}</td>
+                <td>{{ form.password }}</td>
             </tr>
         </table>
 
