@@ -35,28 +35,27 @@
 
     <hr>
 
-    <a name="comments"></a>
-    <h3>Comments</h3>
+    <h3 id="comments">Comments</h3>
     {% for comment in post.ordered_comments.all %}
-            <div class="comment">
-                <aside class="actions">
-                    {% if user.is_authenticated %}
-                        {% if not comment.approved_comment %}
-                            <a href="{% url 'comment_approve' pk=comment.pk %}" class="btn btn-secondary" title="Approve comment" onclick="return confirm('Are you sure you want to approve the comment?')">
-                                {% include './icons/check-square.svg' %}
-                            </a>
-                        {% endif %}
-                        <a href="{% url 'comment_remove' pk=comment.pk %}" class="btn btn-secondary" title="Remove comment" onclick="return confirm('Are you sure you want to remove the comment?')">
-                            {% include './icons/trash.svg' %}
+        <div class="comment">
+            <aside class="actions">
+                {% if user.is_authenticated %}
+                    {% if not comment.approved_comment %}
+                        <a href="{% url 'comment_approve' pk=comment.pk %}" class="btn btn-secondary" title="Approve comment" onclick="return confirm('Are you sure you want to approve the comment?')">
+                            {% include './icons/check-square.svg' %}
                         </a>
                     {% endif %}
-                </aside>
-                {% if comment.approved_comment or user.is_authenticated %}
-                    <div class="comment-date">{{ comment.created_date }}</div>
-                    <strong>{{ comment.author }}</strong>
-                    <p id="comment-text">{{ comment.text|linebreaks }}</p>
+                    <a href="{% url 'comment_remove' pk=comment.pk %}" class="btn btn-secondary" title="Remove comment" onclick="return confirm('Are you sure you want to remove the comment?')">
+                        {% include './icons/trash.svg' %}
+                    </a>
                 {% endif %}
-            </div>
+            </aside>
+            {% if comment.approved_comment or user.is_authenticated %}
+                <div class="comment-date">{{ comment.created_date }}</div>
+                <strong>{{ comment.author }}</strong>
+                <p id="comment-text">{{ comment.text|linebreaks }}</p>
+            {% endif %}
+        </div>
     {% empty %}
         <p id="empty-comments">No comments yet.</p>
     {% endfor %}
