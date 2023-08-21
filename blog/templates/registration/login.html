@@ -24,8 +24,8 @@ Log in – Blog
             </tr>
         </table>
 
-        <input type="submit" value="Log in" class="btn btn-secondary text-button" title="Log in" />
+        <button type="submit" class="btn btn-secondary text-button" title="Log in">Log in</button>
+        <button type="button" class="btn btn-secondary text-button" title="Return to previous page" onclick="return history.back()">Cancel</button>
         <input type="hidden" name="next" value="{{ next }}" />
-        <button class="btn btn-secondary text-button" title="Return to previous page" onclick="return history.back()">Cancel</button>
     </form>
 {% endblock %}
