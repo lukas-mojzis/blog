@@ -1,12 +1,12 @@
 body {
-    padding: 15px 300px 15px 300px;
+    padding: 15px 300px;
     font-family: "Lato";
+    font-size: 13pt;
 }
 
 h3,
 h3 a,
-h3 a:visited,
-h3 a:active {
+h3 a:visited {
     color: olivedrab;
     font-size: 22pt;
 }
@@ -16,28 +16,22 @@ h3 a:hover {
 }
 
 hr {
-    margin: 30px 0px 30px 0px;
+    margin: 30px 0px;
 }
 
 .page-header {
-    margin-top: 0px;
     margin-bottom: 30px;
-}
-
-.page-header > .header-icons {
-    margin: 0px 0px 15px 0px;
 }
 
 .page-header > .container {
     background-color: aliceblue;
-    padding: 20px 20px 20px 20px;
+    padding: 20px;
     clear: both;
 }
 
 .page-header h1,
 .page-header h1 a,
-.page-header h1 a:visited,
-.page-header h1 a:active {
+.page-header h1 a:visited {
     color: midnightblue;
     font-size: 36pt;
     text-align: center;
@@ -49,17 +43,18 @@ hr {
     text-decoration: underline;
 }
 
-.page-footer {
-    text-align: center;
-    margin-top: 20px;
+.header-icons {
+    margin-bottom: 15px;
 }
 
-.page-footer p {
+.page-footer {
+    margin-top: 20px;
     font-size: 9pt;
+    text-align: center;
 }
 
 .page-footer hr {
-    margin: 0px 0px 30px 0px;
+    margin-top: 0px;
 }
 
 .post {
@@ -67,52 +62,40 @@ hr {
 }
 
 .post p {
-    margin: 20px 0px 20px 0px;
-    font-size: 13pt;
-}
-
-.post > .actions {
-    float: right;
+    margin: 20px 0px;
 }
 
 .comment {
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0px;
     font-size: 11pt;
 }
 
-.comment > .actions {
-    float: right;
+.comment p {
+    margin-bottom: 10px;
 }
 
-.post-form {
-    margin-top: 20px;
-}
-
-.post-form textarea,
-.post-form input {
-    width: 100%;
-}
-
+.post-form,
 .comment-form {
     margin-top: 20px;
 }
 
+.post-form textarea,
+.post-form input,
+.comment-form textarea,
 .comment-form input {
     width: 100%;
 }
 
 .comment-form textarea {
-    width: 100%;
     height: 140px;
 }
 
 .login-form {
-    margin: 20px 0px 20px 0px;
-    font-size: 13pt;
+    margin: 20px 0px;
 }
 
 .login-form table {
-    margin: 0px 0px 20px 0px;
+    margin-bottom: 20px;
 }
 
 .login-form table tr th {
@@ -141,20 +124,9 @@ hr {
     float: left;
 }
 
-.date {
-    font-size: 13pt;
-    font-style: italic;
-}
-
-.comment-date {
-    font-style: italic;
-}
-
 .comment-link,
-.comment-link:visited,
-.comment-link:active {
+.comment-link:visited {
     color: midnightblue;
-    font-size: 13pt;
     font-style: italic;
 }
 
@@ -162,16 +134,17 @@ hr {
     text-decoration: none;
 }
 
+.date {
+    font-style: italic;
+}
+
 .left {
     float: left;
 }
 
-.right {
+.right,
+.actions {
     float: right;
-}
-
-#comment-text {
-    margin: 0px 0px 10px 0px;
 }
 
 #login-button {
@@ -180,10 +153,5 @@ hr {
 
 #empty-comments,
 #login-invalid {
-    font-size: 13pt;
-    margin: 20px 0px 20px 0px;
-}
-
-#empty-posts {
-    font-size: 13pt;
+    margin: 20px 0px;
 }
